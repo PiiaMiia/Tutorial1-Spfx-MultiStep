@@ -17,7 +17,7 @@ gulp
 2.	Start the sharepoint framework in the test environment using gulp serve. It will automatically start the app in the browser at https://localhost:4321/temp/workbench.html.*3.	Structure your project. Create a folder under components for every step of your wizard. In each folder create a .tsx file like seen on the picture below. Note that the order is alphabetic, the real order of the wizard is **Main -> StepOne -> StepTwo ->  Confirm**.
 
 <br>
-![alt text](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep/blob/master/media/fig1.png)
+![alt text](media/fig1.png "fig1")
 
 4.	Yeoman automatically created an app that renders from multiPageWiz.tsx under multiPageWiz folder. As we want to make a multiple view app, we put all the views In separate tsx files and treat them as separate components, including the main.
 You can replace all the code in multiPageWiz.tsx with the following:
@@ -69,7 +69,7 @@ Then add ```<Main />``` in between the div’s.
 If you save the file you can see that an image appears on the app page. This is the html that was added to Main!
 
 <br>
-![alt text](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep/blob/master/media/fig2.png)
+![alt text](media/fig2.png "fig2")
 
 6.	You have successfully rendered one component. Now, how to move on to the next? Quite obviously, you need a “Next” or a “Start” button that will take you to the next view. Create the button to Main under span with the following html:
 
@@ -126,8 +126,8 @@ private nextStep(): void {
 Then add the function to the ‘next’ button (```<a href="#"className={`${styles.button}`} onClick={() => this.nextStep()}>…</a>```).  Now when you click the button, nothing visible happens, but you can see in the console that each time you press the button it prints out a number incremented by 1. To bind this to the view, you must tell the main what to render. First, add the condition to the first view that is in the ```<span>```. Do it like this: ```{ this.state.step < 1 && <span>…</span> }```. To add the second view, render StepOne below the ```<span>``` like this: ```{ this.state.step == 1 && <StepOne /> }``` and don’t forget to import it. Press the next button and you should see the view change!
 
 <br>
-![alt text](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep/blob/master/media/fig3.png)
+![alt text](media/fig3.png "fig3")
 <br>
-![alt text](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep/blob/master/media/fig4.png)
+![alt text](media/fig4.png "fig4")
 
 PS! You can add a ’back’ or ‘previous’ button by using a similar function that decrements the state value by 1. If you don’t want it to render in the first view, simply restrict it with a rule that allows rendering only if state value is larger than 0. To prohibit rendering of the ‘next’ button on the last view, just add a rule that prohibits it if the state value is larger than 2 (or allow it until state value is smaller than 3!).
