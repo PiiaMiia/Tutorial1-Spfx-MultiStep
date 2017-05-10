@@ -80,6 +80,7 @@ If you save the file you can see that an image appears on the app page. This is 
 ```
 
 Note that this button currently takes you nowhere, because there is no method yet that will do that. But first, let’s create the second view.
+
 6.1.	 Open StepOne.tsx and add the following code:
 
 ```
