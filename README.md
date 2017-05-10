@@ -18,7 +18,7 @@ gulp
 
 ![alt text](media/fig1.png "fig1")
 
-4.	Yeoman automatically created an app that renders from multiPageWiz.tsx under multiPageWiz folder. As we want to make a multiple view app, we put all the views In separate tsx files and treat them as separate components, including the main.
+3.	Yeoman automatically created an app that renders from multiPageWiz.tsx under multiPageWiz folder. As we want to make a multiple view app, we put all the views In separate tsx files and treat them as separate components, including the main.
 You can replace all the code in multiPageWiz.tsx with the following:
 
 ```
@@ -37,7 +37,7 @@ export default class SpGroup extends React.Component<IMultiPageWizProps, void> {
 
 Note that right now the app is a blank sheet. Don’t worry, we will fill it up.
 
-5.	 Go to Main and replace the code with the following:
+4.	 Go to Main and replace the code with the following:
 
 ```
 import * as React from 'react';
@@ -69,7 +69,7 @@ If you save the file you can see that an image appears on the app page. This is 
 
 ![alt text](media/fig2.png "fig2")
 
-6.	You have successfully rendered one component. Now, how to move on to the next? Quite obviously, you need a “Next” or a “Start” button that will take you to the next view. Create the button to Main under span with the following html:
+5.	You have successfully rendered one component. Now, how to move on to the next? Quite obviously, you need a “Next” or a “Start” button that will take you to the next view. Create the button to Main under span with the following html:
 
 ```
 <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
@@ -81,7 +81,7 @@ If you save the file you can see that an image appears on the app page. This is 
 
 Note that this button currently takes you nowhere, because there is no method yet that will do that. But first, let’s create the second view.
 
-6.1.	 Open StepOne.tsx and add the following code:
+5.1 Open StepOne.tsx and add the following code:
 
 ```
 import * as React from 'react';
@@ -104,7 +104,7 @@ export default class StepOne extends React.Component<any, any> {
 
 Note that this is practically a copy-paste of the Main component, only the class names, html and imports differ a bit. **This is basically a blueprint of any component, so keep that in mind when creating next ones.**
 
-6.2.	Go to Main and create a sort of a router. This is a method that checks where you are at the moment and chooses what to display. First, create a constructor for state that shows where you are at and has a default value of 0. Add the following code just above the render method:
+5.2 Go to Main and create a sort of a router. This is a method that checks where you are at the moment and chooses what to display. First, create a constructor for state that shows where you are at and has a default value of 0. Add the following code just above the render method:
 
 ```
 constructor(props) {
