@@ -2,7 +2,7 @@
 
 ### Description
 
-This tutorial is the first tutorial in the series of how to create a fully functioning SharePoint web app. This example creates Office 365 Groups to SharePoint with set naming convention, connecting to a SharePoint list with client names and triggering an Azure Function that ultimately creates the group. In the next tutorial I will be showing how to add a dropdown input field to this wizard and how to populate it with data fetched from SharePoint. To see the next tutorial, click [here](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep).
+This tutorial is the first tutorial in the series of how to create a fully functioning SharePoint web app. This example creates Office 365 Groups to SharePoint with set naming convention, connecting to a SharePoint list with client names and triggering an Azure Function that ultimately creates the group. In the next tutorial I will be showing how to add a dropdown input field to this wizard and how to populate it with data fetched from SharePoint. To see the next tutorial, click [here](https://github.com/PiiaMiia/Tutorial2-Spfx-MultiStep).
 
 This tutorial covers the following:
 - how to create a Spfx project using Yeoman generator
@@ -137,4 +137,4 @@ Then add the function to the ‘next’ button (```<a href="#"className={`${styl
 
 PS! You can add a ’back’ or ‘previous’ button by using a similar function that decrements the state value by 1. If you don’t want it to render in the first view, simply restrict it with a rule that allows rendering only if state value is larger than 0. To prohibit rendering of the ‘next’ button on the last view, just add a rule that prohibits it if the state value is larger than 2 (or allow it until state value is smaller than 3!).
 
-Please click [here](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep) to go to the next tutorial where I will show you how to add a dropdown list and populate it with data from SharePoint.
+Please click [here](https://github.com/PiiaMiia/Tutorial2-Spfx-MultiStep) to go to the next tutorial where I will show you how to add a dropdown list and populate it with data from SharePoint.
