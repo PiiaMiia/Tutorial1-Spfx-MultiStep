@@ -129,3 +129,5 @@ Then add the function to the ‘next’ button (```<a href="#"className={`${styl
 ![alt text](media/fig4.png "fig4")
 
 PS! You can add a ’back’ or ‘previous’ button by using a similar function that decrements the state value by 1. If you don’t want it to render in the first view, simply restrict it with a rule that allows rendering only if state value is larger than 0. To prohibit rendering of the ‘next’ button on the last view, just add a rule that prohibits it if the state value is larger than 2 (or allow it until state value is smaller than 3!).
+
+This tutorial is the first tutorial in the series of how to create a fully functioning SharePoint web app. This example creates Office 365 Groups to SharePoint with set naming convention, connecting to a SharePoint list with client names and triggering Azure Function that ultimately creates the group. In the next tutorial I will be showing how to add a dropdown input field to this wizard and how to populate it with data fetched from SharePoint. To see the next tutorial, click [here](https://github.com/PiiaMiia/Tutorial1-Spfx-MultiStep).
